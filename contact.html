@@ -6,6 +6,20 @@
   <title>Contact | PRO-1 RENO</title>
   <link rel="stylesheet" href="css/style.css"/>
   <script src="js/script.js" defer></script>
+  <style>
+    section {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.8s ease-out forwards;
+      animation-delay: 0.2s;
+    }
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="top-bar">📞 (647) 719-0089 | 📧 AndraeDavis@outlook.com</header>
@@ -21,11 +35,13 @@
 
   <section class="page">
     <h1>Contact Us</h1>
-    <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit">Send</button>
+    <p>If you’re ready to upgrade your home or have questions about a project, we’d love to hear from you.</p>
+
+    <form action="https://formspree.io/f/your-email-here" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="_replyto" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
     </form>
   </section>
 

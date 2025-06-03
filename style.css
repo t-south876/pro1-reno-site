@@ -1,4 +1,4 @@
-/* Reset and Base */
+/* Reset and Basics */
 * {
   margin: 0;
   padding: 0;
@@ -7,32 +7,37 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f9f9f9;
-  color: #333;
+  background-color: #f4f4f4;
+  color: #222;
   line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
 }
 
 /* Top Bar */
 .top-bar {
   background-color: #222;
-  color: white;
-  text-align: center;
+  color: #fff;
   padding: 10px;
-  font-size: 14px;
+  text-align: center;
+  font-size: 0.9rem;
 }
 
 /* Navbar */
 .navbar {
-  background: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #333;
   padding: 15px 30px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
-  font-size: 22px;
+  font-size: 1.5rem;
   font-weight: bold;
   color: #00aeef;
 }
@@ -40,137 +45,188 @@ body {
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 15px;
+  gap: 20px;
 }
 
 .nav-links a {
-  text-decoration: none;
-  color: #333;
-  padding: 8px 14px;
-  border-radius: 5px;
-  transition: all 0.3s ease;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
 .nav-links a:hover,
 .nav-links .active {
-  background-color: #00aeef;
+  color: #00aeef;
+}
+
+.cta {
+  background-color: #ff6a00;
   color: #fff;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.cta:hover {
+  background-color: #e66000;
 }
 
 /* Hero Section */
 .hero {
-  background-color: #f4f4f4;
-  text-align: center;
-  padding: 50px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 30px;
+  background-color: #fff;
+  flex-wrap: wrap;
 }
 
-.hero-text h1 {
-  font-size: 36px;
-  color: #222;
-  margin-bottom: 10px;
-}
-
-.hero-text h2 {
-  font-size: 24px;
-  color: #00aeef;
-  margin-bottom: 20px;
-}
-
-.hero-text p {
-  font-size: 18px;
-  margin-bottom: 25px;
-  color: #555;
+.hero-content {
+  flex: 1 1 500px;
 }
 
 .hero-image img {
   max-width: 100%;
-  height: auto;
-  margin-top: 20px;
   border-radius: 8px;
 }
 
-/* Buttons */
-.btn-primary,
-.btn-outline {
-  display: inline-block;
-  margin: 10px;
-  padding: 12px 22px;
-  text-decoration: none;
-  font-size: 16px;
-  border-radius: 5px;
-  font-weight: bold;
+.hero-text h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.hero-text h2 {
+  font-size: 1.5rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.features {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.features li {
+  margin-bottom: 10px;
+  color: #333;
+  font-weight: 500;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
 .btn-primary {
   background-color: #00aeef;
   color: white;
+  padding: 10px 18px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0099cc;
 }
 
 .btn-outline {
-  background: transparent;
   border: 2px solid #00aeef;
   color: #00aeef;
+  padding: 10px 18px;
+  border-radius: 5px;
+  background-color: transparent;
+  transition: all 0.3s ease;
 }
 
 .btn-outline:hover {
   background-color: #00aeef;
-  color: white;
+  color: #fff;
 }
 
-/* General Page Section */
+/* Page Section */
 .page {
-  max-width: 1000px;
-  margin: auto;
-  padding: 40px 20px;
+  padding: 50px 30px;
+  background-color: #fff;
 }
 
 .page h1 {
-  color: #00aeef;
+  font-size: 2rem;
   margin-bottom: 20px;
+  color: #222;
+}
+
+.page p,
+.page ul {
+  font-size: 1.1rem;
+  color: #333;
+  max-width: 800px;
 }
 
 .services-list {
-  list-style: disc;
-  margin-left: 25px;
-  font-size: 18px;
-  line-height: 1.7;
+  list-style-type: square;
+  margin-left: 20px;
 }
 
 /* Contact Form */
 form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
   margin-top: 20px;
 }
 
 form input,
 form textarea {
-  width: 100%;
-  padding: 12px;
   margin-bottom: 15px;
+  padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
+  border-radius: 5px;
+  font-size: 1rem;
 }
 
 form button {
-  background-color: #00aeef;
+  padding: 10px 15px;
+  background-color: #ff6a00;
   color: white;
   border: none;
-  padding: 12px 20px;
-  font-size: 16px;
-  border-radius: 4px;
+  border-radius: 5px;
+  font-weight: bold;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 form button:hover {
-  background-color: #007bb5;
+  background-color: #e65c00;
 }
 
 /* Footer */
 footer {
-  background-color: #222;
-  color: white;
   text-align: center;
-  padding: 15px;
-  margin-top: 50px;
-  font-size: 14px;
+  padding: 20px;
+  background-color: #222;
+  color: #fff;
+  font-size: 0.9rem;
+  margin-top: 40px;
+}
+
+/* Animations (redundant fallback if not embedded in HTML) */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+section {
+  animation: fadeInUp 0.8s ease-out forwards;
+  opacity: 0;
+  transform: translateY(20px);
+  animation-delay: 0.2s;
 }
