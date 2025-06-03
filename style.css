@@ -1,4 +1,4 @@
-/* Reset & Base */
+/* Reset and Base */
 * {
   margin: 0;
   padding: 0;
@@ -17,113 +17,126 @@ body {
   background-color: #222;
   color: white;
   text-align: center;
-  padding: 8px;
+  padding: 10px;
   font-size: 14px;
 }
 
-/* Navigation */
+/* Navbar */
 .navbar {
   background: #fff;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  padding: 15px 30px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: bold;
+  color: #00aeef;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 15px;
 }
 
 .nav-links a {
   text-decoration: none;
   color: #333;
-  padding: 6px 12px;
-  border-radius: 4px;
-  transition: background 0.3s;
+  padding: 8px 14px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
 }
 
 .nav-links a:hover,
 .nav-links .active {
-  background-color: #0077cc;
-  color: white;
+  background-color: #00aeef;
+  color: #fff;
 }
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(to right, #0077cc, #005fa3);
-  color: white;
-  padding: 100px 20px;
+  background-color: #f4f4f4;
   text-align: center;
+  padding: 50px 20px;
 }
 
 .hero-text h1 {
   font-size: 36px;
+  color: #222;
   margin-bottom: 10px;
 }
 
 .hero-text h2 {
   font-size: 24px;
+  color: #00aeef;
   margin-bottom: 20px;
 }
 
+.hero-text p {
+  font-size: 18px;
+  margin-bottom: 25px;
+  color: #555;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+  border-radius: 8px;
+}
+
+/* Buttons */
 .btn-primary,
 .btn-outline {
   display: inline-block;
   margin: 10px;
-  padding: 12px 20px;
+  padding: 12px 22px;
   text-decoration: none;
-  border-radius: 5px;
   font-size: 16px;
+  border-radius: 5px;
+  font-weight: bold;
 }
 
 .btn-primary {
-  background: #ff6600;
+  background-color: #00aeef;
   color: white;
 }
 
 .btn-outline {
   background: transparent;
-  border: 2px solid white;
-  color: white;
+  border: 2px solid #00aeef;
+  color: #00aeef;
 }
 
 .btn-outline:hover {
-  background: white;
-  color: #0077cc;
+  background-color: #00aeef;
+  color: white;
 }
 
-/* Page Section */
+/* General Page Section */
 .page {
-  max-width: 900px;
+  max-width: 1000px;
   margin: auto;
   padding: 40px 20px;
 }
 
 .page h1 {
+  color: #00aeef;
   margin-bottom: 20px;
-  color: #0077cc;
 }
 
 .services-list {
   list-style: disc;
   margin-left: 25px;
-  margin-top: 10px;
-}
-
-.services-list li {
-  margin-bottom: 10px;
   font-size: 18px;
+  line-height: 1.7;
 }
 
-/* Form Styles */
+/* Contact Form */
 form {
   margin-top: 20px;
 }
@@ -139,7 +152,7 @@ form textarea {
 }
 
 form button {
-  background: #0077cc;
+  background-color: #00aeef;
   color: white;
   border: none;
   padding: 12px 20px;
@@ -149,14 +162,15 @@ form button {
 }
 
 form button:hover {
-  background: #005fa3;
+  background-color: #007bb5;
 }
 
 /* Footer */
 footer {
-  background-color: #333;
+  background-color: #222;
   color: white;
   text-align: center;
   padding: 15px;
-  margin-top: 40px;
+  margin-top: 50px;
+  font-size: 14px;
 }
