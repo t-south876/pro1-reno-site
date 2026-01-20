@@ -3,32 +3,465 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About | PRO-1 RENO</title>
+  <meta name="description" content="Learn about PRO-1 RENO - Ontario's trusted renovation company. Licensed, bonded, and insured with years of experience transforming homes.">
+  <title>About Us | PRO-1 RENO</title>
   <link rel="stylesheet" href="style.css"/>
+  <style>
+    .about-hero {
+      background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+      color: white;
+      padding: 100px 20px 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+    }
+
+    .about-hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .about-hero h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+      letter-spacing: -1px;
+    }
+
+    .about-hero p {
+      font-size: 1.25rem;
+      opacity: 0.95;
+      line-height: 1.7;
+    }
+
+    .about-content {
+      max-width: 1200px;
+      margin: -60px auto 0;
+      padding: 0 20px 80px;
+      position: relative;
+      z-index: 10;
+    }
+
+    .about-intro {
+      background: white;
+      border-radius: 16px;
+      padding: 60px;
+      box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
+      margin-bottom: 80px;
+      border: 1px solid #e5e7eb;
+    }
+
+    .about-intro h2 {
+      font-size: 2.5rem;
+      color: #0f172a;
+      margin-bottom: 30px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+
+    .about-intro p {
+      font-size: 1.15rem;
+      line-height: 1.8;
+      color: #475569;
+      margin-bottom: 20px;
+    }
+
+    .values-section {
+      margin-bottom: 80px;
+    }
+
+    .values-title {
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 60px;
+      letter-spacing: -0.5px;
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .value-card {
+      background: white;
+      padding: 40px;
+      border-radius: 16px;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+    }
+
+    .value-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
+      border-color: #2563eb;
+    }
+
+    .value-icon {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .value-card h3 {
+      font-size: 1.5rem;
+      color: #0f172a;
+      margin-bottom: 15px;
+      font-weight: 700;
+    }
+
+    .value-card p {
+      color: #64748b;
+      line-height: 1.7;
+      font-size: 1rem;
+    }
+
+    .credentials-section {
+      background: linear-gradient(to bottom, #f8fafc, white);
+      padding: 80px 20px;
+      margin: 0 -20px 80px;
+    }
+
+    .credentials-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .credentials-title {
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 60px;
+      letter-spacing: -0.5px;
+    }
+
+    .credentials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      text-align: center;
+    }
+
+    .credential-item {
+      padding: 30px;
+    }
+
+    .credential-icon {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+    }
+
+    .credential-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 10px;
+    }
+
+    .credential-description {
+      color: #64748b;
+      line-height: 1.6;
+    }
+
+    .team-section {
+      background: white;
+      border-radius: 16px;
+      padding: 60px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      border: 1px solid #e5e7eb;
+      margin-bottom: 80px;
+    }
+
+    .team-section h2 {
+      font-size: 2.5rem;
+      color: #0f172a;
+      margin-bottom: 30px;
+      font-weight: 800;
+      text-align: center;
+      letter-spacing: -0.5px;
+    }
+
+    .team-description {
+      font-size: 1.15rem;
+      line-height: 1.8;
+      color: #475569;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 40px;
+    }
+
+    .commitment-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .commitment-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      padding: 20px;
+      background: #f8fafc;
+      border-radius: 10px;
+      border-left: 3px solid #2563eb;
+    }
+
+    .commitment-check {
+      color: #2563eb;
+      font-size: 24px;
+      font-weight: bold;
+      flex-shrink: 0;
+    }
+
+    .commitment-text {
+      color: #334155;
+      font-weight: 500;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+      .about-hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .about-intro {
+        padding: 40px 30px;
+      }
+
+      .about-intro h2,
+      .values-title,
+      .credentials-title,
+      .team-section h2 {
+        font-size: 2rem;
+      }
+
+      .values-grid,
+      .credentials-grid,
+      .commitment-list {
+        grid-template-columns: 1fr;
+      }
+
+      .team-section {
+        padding: 40px 30px;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="top-bar">
-    📞 (647) 719-0089 | 📧 AndraeDavis@outlook.com
+    📞 <a href="tel:6477190089">(647) 719-0089</a> | 📧 <a href="mailto:Pro1reno2017@gmail.com">Pro1reno2017@gmail.com</a>
   </header>
 
   <nav class="navbar">
-    <div class="logo">🏠 PRO-1 RENO</div>
+    <div class="logo">
+      <img src="pro1-reno-logo.jpg" alt="PRO-1 RENO">
+      <span>PRO-1 RENO</span>
+    </div>
+    <button class="mobile-menu-toggle" aria-label="Toggle menu">☰</button>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="services.html">Services</a></li>
       <li><a href="about.html" class="active">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
       <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 
-  <section class="page fade-in">
-    <h1>About Us</h1>
-    <p>PRO-1 RENO is a renovation company based in Ontario, Canada, providing professional remodeling services with integrity and attention to detail. With years of experience, we turn your vision into reality—from minor upgrades to full remodels.</p>
+  <section class="about-hero">
+    <div class="about-hero-content">
+      <h1>About PRO-1 RENO</h1>
+      <p>Building excellence in home renovation across Woodstock and Oxford County</p>
+    </div>
+  </section>
+
+  <div class="about-content">
+    
+    <section class="about-intro">
+      <h2>Your Trusted Renovation Partner</h2>
+      <p>
+        Pro-1 Reno is a premier residential renovation and general contracting company based in Woodstock, Ontario, serving discerning homeowners throughout Oxford County and surrounding areas. We specialize in delivering exceptional craftsmanship, refined finishes, and expertly managed renovations that elevate both the beauty and functionality of your home.
+      </p>
+      <p>
+        From custom bathrooms and kitchens to full basement conversions and structural renovations, Pro-1 Reno approaches every project with precision, transparency, and a commitment to excellence. We collaborate closely with our clients, providing thoughtful planning, clear communication, and meticulous execution—ensuring every detail meets the highest standards and complies fully with Ontario building codes.
+      </p>
+      <p>
+        At Pro-1 Reno, quality is never compromised. Our mission is to create timeless spaces that add lasting value while offering a seamless, professional renovation experience from concept to completion.
+      </p>
+    </section>
+
+    <section class="values-section">
+      <h2 class="values-title">Our Core Values</h2>
+      <div class="values-grid">
+        
+        <div class="value-card">
+          <div class="value-icon">⚡</div>
+          <h3>Quality First</h3>
+          <p>We never compromise on materials or workmanship. Every project receives the same meticulous attention to detail, regardless of size or budget.</p>
+        </div>
+
+        <div class="value-card">
+          <div class="value-icon">🤝</div>
+          <h3>Integrity & Honesty</h3>
+          <p>Transparent pricing, honest timelines, and open communication. We build trust by doing what we say and saying what we do.</p>
+        </div>
+
+        <div class="value-card">
+          <div class="value-icon">💼</div>
+          <h3>Professionalism</h3>
+          <p>From the initial consultation to final walkthrough, we maintain the highest standards of professionalism in every interaction.</p>
+        </div>
+
+        <div class="value-card">
+          <div class="value-icon">🎯</div>
+          <h3>Client-Focused</h3>
+          <p>Your vision drives our work. We listen carefully, provide expert guidance, and ensure the final result reflects your unique style and needs.</p>
+        </div>
+
+        <div class="value-card">
+          <div class="value-icon">⏰</div>
+          <h3>Reliability</h3>
+          <p>We respect your time and schedule. Projects are completed efficiently with minimal disruption to your daily life.</p>
+        </div>
+
+        <div class="value-card">
+          <div class="value-icon">🔧</div>
+          <h3>Expert Craftsmanship</h3>
+          <p>Our team consists of experienced professionals who take pride in their work and bring years of expertise to every project.</p>
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+
+  <section class="credentials-section">
+    <div class="credentials-container">
+      <h2 class="credentials-title">Why Choose PRO-1 RENO</h2>
+      <div class="credentials-grid">
+        
+        <div class="credential-item">
+          <div class="credential-icon">✓</div>
+          <h3 class="credential-title">Licensed & Insured</h3>
+          <p class="credential-description">Fully licensed, bonded, and insured for your complete protection and peace of mind</p>
+        </div>
+
+        <div class="credential-item">
+          <div class="credential-icon">📍</div>
+          <h3 class="credential-title">Woodstock Based</h3>
+          <p class="credential-description">Proudly serving Oxford County and surrounding communities with local expertise</p>
+        </div>
+
+        <div class="credential-item">
+          <div class="credential-icon">🏆</div>
+          <h3 class="credential-title">500+ Happy Clients</h3>
+          <p class="credential-description">Hundreds of satisfied homeowners who trust us with their renovation dreams</p>
+        </div>
+
+        <div class="credential-item">
+          <div class="credential-icon">💯</div>
+          <h3 class="credential-title">Quality Guarantee</h3>
+          <p class="credential-description">We stand behind our work with comprehensive warranties and ongoing support</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="about-content">
+    <section class="team-section">
+      <h2>Our Commitment to You</h2>
+      <p class="team-description">
+        When you choose PRO-1 RENO, you're choosing a partner who cares about your home as much as you do. We understand that renovations are more than construction projects—they're investments in your comfort, lifestyle, and future.
+      </p>
+
+      <div class="commitment-list">
+        <div class="commitment-item">
+          <span class="commitment-check">✓</span>
+          <span class="commitment-text">Clear, upfront pricing with no hidden fees or surprise costs</span>
+        </div>
+        <div class="commitment-item">
+          <span class="commitment-check">✓</span>
+          <span class="commitment-text">Detailed project timelines with regular progress updates</span>
+        </div>
+        <div class="commitment-item">
+          <span class="commitment-check">✓</span>
+          <span class="commitment-text">Premium materials sourced from trusted suppliers</span>
+        </div>
+        <div class="commitment-item">
+          <span class="commitment-check">✓</span>
+          <span class="commitment-text">Clean, organized work sites maintained daily</span>
+        </div>
+        <div class="commitment-item">
+          <span class="commitment-check">✓</span>
+          <span class="commitment-text">Respectful, professional crew members you can trust</span>
+        </div>
+        <div class="commitment-item">
+          <span class="commitment-check">✓</span>
+          <span class="commitment-text">Compliance with all local building codes and regulations</span>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section class="cta-section">
+    <div class="cta-content">
+      <h2>Let's Build Something Great Together</h2>
+      <p>Ready to transform your space? Get in touch for a free consultation</p>
+      <a href="contact.html" class="btn btn-primary btn-large">Contact Us Today</a>
+    </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 PRO-1 RENO. All rights reserved.</p>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>PRO-1 RENO</h4>
+        <p>Professional home renovation services in Ontario, Canada</p>
+        <p style="margin-top: 10px; font-size: 14px;">Licensed, Bonded & Insured</p>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <p>📞 (647) 719-0089</p>
+        <p>📧 Pro1reno2017@gmail.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 PRO-1 RENO. All rights reserved.</p>
+    </div>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

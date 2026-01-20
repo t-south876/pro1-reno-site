@@ -3,38 +3,166 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Contact PRO-1 RENO for a free quote on your home renovation project. Licensed, bonded, and insured.">
   <title>Contact | PRO-1 RENO</title>
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
   <header class="top-bar">
-    📞 (647) 719-0089 | 📧 AndraeDavis@outlook.com
+    📞 <a href="tel:6477190089">(647) 719-0089</a> | 📧 <a href="mailto:Pro1reno2017@gmail.com">Pro1reno2017@gmail.com</a>
   </header>
 
   <nav class="navbar">
     <div class="logo">🏠 PRO-1 RENO</div>
+    <button class="mobile-menu-toggle" aria-label="Toggle menu">☰</button>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="services.html">Services</a></li>
       <li><a href="about.html">About</a></li>
-      <li><a href="contact.html" class="active">Contact</a></li>
       <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
     </ul>
   </nav>
 
   <section class="page fade-in">
-    <h1>Contact Us</h1>
-    <p>If you’re ready to upgrade your home or have questions about a project, we’d love to hear from you.</p>
-    <form>
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
+    <h1>Get in Touch</h1>
+    <p style="font-size: 1.1rem; margin-bottom: 30px;">Ready to transform your home? Fill out the form below or give us a call. We'll get back to you within 24 hours to discuss your project.</p>
+    
+    <div style="display: grid; grid-template-columns: 1fr; gap: 40px; max-width: 1000px; margin: 0 auto;">
+      
+      <!-- Contact Form -->
+      <div>
+        <h2 style="color: #a0522d; margin-bottom: 20px;">Send Us a Message</h2>
+        <form id="contact-form">
+          <input type="text" name="from_name" placeholder="Your Name *" required />
+          <input type="email" name="from_email" placeholder="Your Email *" required />
+          <input type="tel" name="phone" placeholder="Your Phone Number" />
+          
+          <select name="project_type" required>
+            <option value="">Select Project Type *</option>
+            <option value="Kitchen Renovation">Kitchen Renovation</option>
+            <option value="Bathroom Remodel">Bathroom Remodel</option>
+            <option value="Basement Finishing">Basement Finishing</option>
+            <option value="Full Home Renovation">Full Home Renovation</option>
+            <option value="Other">Other</option>
+          </select>
+          
+          <textarea name="message" placeholder="Tell us about your project *" required></textarea>
+          
+          <button type="submit">Send Message</button>
+        </form>
+        
+        <div id="form-status"></div>
+      </div>
+      
+      <!-- Contact Info -->
+      <div style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+        <h2 style="color: #a0522d; margin-bottom: 20px;">Contact Information</h2>
+        
+        <div style="margin-bottom: 20px;">
+          <h3 style="color: #333; font-size: 1.1rem; margin-bottom: 10px;">📞 Phone</h3>
+          <a href="tel:6477190089" style="color: #d2691e; text-decoration: none; font-size: 1.2rem;">(647) 719-0089</a>
+        </div>
+        
+        <div style="margin-bottom: 20px;">
+          <h3 style="color: #333; font-size: 1.1rem; margin-bottom: 10px;">📧 Email</h3>
+          <a href="mailto:Pro1reno2017@gmail.com" style="color: #d2691e; text-decoration: none;">Pro1reno2017@gmail.com</a>
+        </div>
+        
+        <div style="margin-bottom: 20px;">
+          <h3 style="color: #333; font-size: 1.1rem; margin-bottom: 10px;">📍 Service Area</h3>
+          <p style="color: #666;">Ontario, Canada</p>
+        </div>
+        
+        <div style="margin-bottom: 20px;">
+          <h3 style="color: #333; font-size: 1.1rem; margin-bottom: 10px;">🕐 Business Hours</h3>
+          <p style="color: #666;">Monday - Friday: 8:00 AM - 6:00 PM<br>
+          Saturday: 9:00 AM - 4:00 PM<br>
+          Sunday: Closed</p>
+        </div>
+        
+        <div style="background: #fff5eb; padding: 20px; border-radius: 8px; margin-top: 30px;">
+          <p style="margin: 0; font-weight: 600; color: #a0522d;">✓ Licensed, Bonded & Insured</p>
+          <p style="margin: 10px 0 0; color: #666; font-size: 0.9rem;">Professional renovation services you can trust</p>
+        </div>
+      </div>
+      
+    </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 PRO-1 RENO. All rights reserved.</p>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>PRO-1 RENO</h4>
+        <p>Professional home renovation services in Ontario, Canada</p>
+        <p style="margin-top: 10px; font-size: 14px;">Licensed, Bonded & Insured</p>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <p>📞 (647) 719-0089</p>
+        <p>📧 Pro1reno2017@gmail.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 PRO-1 RENO. All rights reserved.</p>
+    </div>
   </footer>
+
+  <script src="script.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function(){
+      emailjs.init("jtqdbCQFA6MSqgE90");
+    })();
+  </script>
+  <script>
+    // Contact form handling with EmailJS
+    const form = document.getElementById('contact-form');
+    const formStatus = document.getElementById('form-status');
+    
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const submitButton = form.querySelector('button[type="submit"]');
+      const originalText = submitButton.textContent;
+      submitButton.textContent = 'Sending...';
+      submitButton.disabled = true;
+      
+      // Clear any existing messages
+      formStatus.innerHTML = '';
+      
+      // Send email using EmailJS
+      emailjs.sendForm('service_m1twssd', 'template_vlq9xyg', this)
+        .then(function() {
+          formStatus.innerHTML = '<div class="form-success" style="display: block;">Thank you! We\'ll get back to you within 24 hours.</div>';
+          form.reset();
+          
+          setTimeout(() => {
+            formStatus.innerHTML = '';
+          }, 5000);
+        }, function(error) {
+          formStatus.innerHTML = '<div class="form-error" style="display: block;">Oops! Something went wrong. Please call us at (647) 719-0089.</div>';
+          console.log('EmailJS error:', error);
+          
+          setTimeout(() => {
+            formStatus.innerHTML = '';
+          }, 5000);
+        })
+        .finally(function() {
+          submitButton.textContent = originalText;
+          submitButton.disabled = false;
+        });
+    });
+  </script>
 </body>
 </html>
