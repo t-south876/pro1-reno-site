@@ -69,7 +69,6 @@ body {
 .top-icon {
   display: block;
   flex-shrink: 0;
-  vertical-align: middle;
 }
 
 .top-sep {
@@ -107,7 +106,7 @@ body {
   height: 72px;
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 9997;            /* high enough to sit above page content */
   border-bottom: 3px solid var(--orange);
   box-shadow: 0 2px 16px rgba(0,0,0,0.08);
 }
@@ -976,14 +975,25 @@ footer {
     top: 100%; left: 0; right: 0;
     background: var(--white);
     flex-direction: column;
-    padding: 16px;
+    padding: 12px 8px;
     gap: 2px;
-    border-bottom: 2px solid var(--orange);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+    border-bottom: 3px solid var(--orange);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.18);
+    z-index: 9998;          /* must be below lightbox (9999) but above everything else */
+    pointer-events: auto;   /* ensure links are tappable */
   }
   .nav-links.active { display: flex; }
   .nav-links a::after { display: none; }
-  .nav-links a { padding: 14px 16px; width: 100%; }
+  .nav-links a {
+    padding: 14px 20px;
+    width: 100%;
+    display: block;
+    min-height: 48px;        /* minimum tap target */
+    pointer-events: auto;
+    -webkit-tap-highlight-color: rgba(217,95,26,0.15);
+  }
+  /* Dark mode dropdown */
+  [data-theme="dark"] .nav-links { background: #1f2937; }
   .hero h1 { font-size: clamp(2.4rem, 10vw, 3.8rem); }
   .hero { min-height: 80vh; }
   .services-grid { grid-template-columns: 1fr; }
@@ -1612,7 +1622,6 @@ select:focus {
 
 /* Lift all direct page sections above the canvas */
 .top-bar,
-.navbar,
 .hero,
 .services-preview,
 .why-choose-us,
@@ -1633,6 +1642,7 @@ footer,
   position: relative;
   z-index: 1;
 }
+/* Navbar handled separately with high z-index above */
 
 
 /* ═══════════════════════════════════════════════════════
