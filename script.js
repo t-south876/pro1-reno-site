@@ -176,6 +176,8 @@ document.addEventListener('DOMContentLoaded', function () {
   if (form && typeof emailjs !== 'undefined') {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
+      // Honeypot check — bots fill hidden fields, real users don't
+      if (form.querySelector('[name="_honeypot"]') && form.querySelector('[name="_honeypot"]').value) return;
       const btn = form.querySelector('button[type="submit"]'), orig = btn.textContent;
       btn.textContent = 'Sending...';
       btn.disabled = true;
@@ -342,11 +344,10 @@ document.addEventListener('DOMContentLoaded', function () {
   let cur = 0, busy = false, hintShown = false;
 
   function updateUI() {
-    cap.textContent = imgs[cur].alt;
-    ctr.textContent = `${cur + 1} / ${imgs.length}`;
     dotsEl.querySelectorAll('.lb-dot').forEach((d, i) => d.classList.toggle('on', i === cur));
     const active = dotsEl.children[cur];
     if (active) active.scrollIntoView({ inline: 'center', block: 'nearest', behavior: 'smooth' });
+    ctr.textContent = `${cur + 1} / ${imgs.length}`;
   }
 
   function show(i, dir) {
