@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
   <meta name="description" content="PRO-1 RENO - Professional home renovation services in Ontario. Licensed, bonded, and insured. Specializing in basements, kitchens, bathrooms, and full remodels.">
   <title>PRO-1 RENO | Professional Home Renovations in Ontario</title>
  
@@ -20,7 +20,7 @@
 </head>
 <body>
   <header class="top-bar">
-    📞 <a href="tel:6477190089">(647) 719-0089</a> | 📧 <a href="mailto:Pro1reno2017@gmail.com">Pro1reno2017@gmail.com</a>
+    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:4px;margin-top:-2px"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.38 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 5.55 5.55l.96-.96a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21 15.5v1.42z"/></svg><a href="tel:6477190089">(647) 719-0089</a> | <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:4px;margin-top:-2px"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><a href="mailto:Pro1reno2017@gmail.com">Pro1reno2017@gmail.com</a>
   </header>
 
   <nav class="navbar">
@@ -28,13 +28,25 @@
       <img src="pro1-reno-logo.jpg" alt="PRO-1 RENO">
       <span>PRO-1 RENO</span>
     </div>
-    <button class="mobile-menu-toggle" aria-label="Toggle menu">☰</button>
+    <button class="mobile-menu-toggle" aria-label="Toggle menu"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="18" y2="18"/></svg></button>
     <ul class="nav-links">
       <li><a href="index.html" class="active">Home</a></li>
       <li><a href="services.html">Services</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="gallery.html">Gallery</a></li>
       <li><a href="contact.html">Contact</a></li>
+      <li class="theme-toggle-li">
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark/light mode"><span class="toggle-label" id="toggle-label">DARK</span>
+          <svg id="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+            <path d="M15 12l-8.5 8.5a2.121 2.121 0 0 1-3-3L12 9"/>
+            <path d="M17.64 15L22 10.64"/>
+            <path d="m20.91 11.7-1.25-1.25c-.6-.6-.93-1.4-.93-2.25v-.86L16.01 5.6a5.009 5.009 0 0 0-6.22 .78l-1.94 1.95 3.12 3.12"/>
+          </svg>
+          <svg id="theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" style="display:none">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+      </li>
     </ul>
   </nav>
 
@@ -43,8 +55,8 @@
       <h1>Transform Your Home with PRO-1 RENO</h1>
       <p class="hero-subtitle">Professional renovation services for basements, kitchens, bathrooms, and complete home remodels</p>
       <div class="hero-badges">
-        <span class="badge">✓ Licensed</span>
-        <span class="badge">✓ Insured</span>
+        <span class="badge"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:5px;margin-top:-2px"><polyline points="20 6 9 17 4 12"/></svg>Licensed</span>
+        <span class="badge"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:5px;margin-top:-2px"><polyline points="20 6 9 17 4 12"/></svg>Insured</span>
       </div>
       <div class="cta-buttons">
         <a href="contact.html" class="btn btn-primary">Get a Free Quote</a>
@@ -57,22 +69,22 @@
     <h2>Our Services</h2>
     <div class="services-grid">
       <div class="service-card">
-        <div class="service-icon">🏘️</div>
+        <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
         <h3>Basements & Additions</h3>
         <p>Complete basement finishing and home additions to expand your living space</p>
       </div>
       <div class="service-card">
-        <div class="service-icon">🗄️</div>
+        <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/><rect x="6" y="7" width="4" height="4" rx="1"/><rect x="14" y="7" width="4" height="4" rx="1"/></svg></div>
         <h3>Kitchen Renovations</h3>
         <p>Modern kitchen remodels with custom cabinets, countertops, and fixtures</p>
       </div>
       <div class="service-card">
-        <div class="service-icon">🛁</div>
+        <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6 6.5 3.5a1.5 1.5 0 0 0-1-.5C4.683 3 4 3.683 4 4.5V17a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5"/><line x1="10" y1="5" x2="8" y2="7"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="7" y1="19" x2="7" y2="21"/><line x1="17" y1="19" x2="17" y2="21"/></svg></div>
         <h3>Bathroom Remodels</h3>
         <p>Beautiful, functional bathroom designs from concept to completion</p>
       </div>
       <div class="service-card">
-        <div class="service-icon">📐</div>
+        <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
         <h3>Interior Finishing</h3>
         <p>Drywall, painting, flooring, trim work, and all finishing touches</p>
       </div>
@@ -131,13 +143,25 @@
           <li><a href="about.html">About</a></li>
           <li><a href="gallery.html">Gallery</a></li>
           <li><a href="contact.html">Contact</a></li>
+      <li class="theme-toggle-li">
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark/light mode"><span class="toggle-label" id="toggle-label">DARK</span>
+          <svg id="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+            <path d="M15 12l-8.5 8.5a2.121 2.121 0 0 1-3-3L12 9"/>
+            <path d="M17.64 15L22 10.64"/>
+            <path d="m20.91 11.7-1.25-1.25c-.6-.6-.93-1.4-.93-2.25v-.86L16.01 5.6a5.009 5.009 0 0 0-6.22 .78l-1.94 1.95 3.12 3.12"/>
+          </svg>
+          <svg id="theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" style="display:none">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+      </li>
           <li><a href="https://trustedpros.ca/company/pro--1-reno" target="_blank" rel="noopener noreferrer">Reviews (4.9/5 ⭐)</a></li>
         </ul>
       </div>
       <div class="footer-section">
         <h4>Contact</h4>
-        <p>📞 (647) 719-0089</p>
-        <p>📧 Pro1reno2017@gmail.com</p>
+        <p><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:6px;margin-top:-2px;opacity:0.7"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.38 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 5.55 5.55l.96-.96a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21 15.5v1.42z"/></svg>(647) 719-0089</p>
+        <p><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:6px;margin-top:-2px;opacity:0.7"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>Pro1reno2017@gmail.com</p>
       </div>
     </div>
     <div class="footer-bottom">
@@ -146,5 +170,39 @@
   </footer>
 
   <script src="script.js"></script>
+
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      const isDark = html.getAttribute('data-theme') === 'dark';
+      const next = isDark ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('pro1-theme', next);
+      const sun   = document.getElementById('theme-icon-sun');
+      const moon  = document.getElementById('theme-icon-moon');
+      const label = document.getElementById('toggle-label');
+      if (next === 'dark') {
+        if (sun)   sun.style.display  = 'none';
+        if (moon)  moon.style.display = 'block';
+        if (label) label.textContent  = 'LIGHT';
+      } else {
+        if (sun)   sun.style.display  = 'block';
+        if (moon)  moon.style.display = 'none';
+        if (label) label.textContent  = 'DARK';
+      }
+    }
+    (function(){
+      const saved = localStorage.getItem('pro1-theme') || 'light';
+      document.documentElement.setAttribute('data-theme', saved);
+      const sun   = document.getElementById('theme-icon-sun');
+      const moon  = document.getElementById('theme-icon-moon');
+      const label = document.getElementById('toggle-label');
+      if (saved === 'dark') {
+        if (sun)   sun.style.display  = 'none';
+        if (moon)  moon.style.display = 'block';
+        if (label) label.textContent  = 'LIGHT';
+      }
+    })();
+  </script>
 </body>
 </html>

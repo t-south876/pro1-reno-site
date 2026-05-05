@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Learn about PRO-1 RENO - Ontario's trusted renovation company. Licensed and insured with years of experience transforming homes.">
-  <title>About Us | PRO-1 RENO</title>
- 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+  <meta name="description" content="Contact PRO-1 RENO for a free quote on your home renovation project. Licensed, bonded, and insured.">
+  <title>Contact | PRO-1 RENO</title>
+
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -17,487 +17,102 @@
   <meta name="theme-color" content="#2563eb">
 
   <link rel="stylesheet" href="style.css"/>
-  <style>
-    .about-hero {
-      background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
-      color: white;
-      padding: 100px 20px 80px;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .about-hero::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
-    }
-
-    .about-hero-content {
-      max-width: 800px;
-      margin: 0 auto;
-      position: relative;
-      z-index: 1;
-    }
-
-    .about-hero h1 {
-      font-size: 3.5rem;
-      font-weight: 800;
-      margin-bottom: 20px;
-      letter-spacing: -1px;
-    }
-
-    .about-hero p {
-      font-size: 1.25rem;
-      opacity: 0.95;
-      line-height: 1.7;
-    }
-
-    .about-content {
-      max-width: 1200px;
-      margin: -60px auto 0;
-      padding: 0 20px 80px;
-      position: relative;
-      z-index: 10;
-    }
-
-    .about-intro {
-      background: white;
-      border-radius: 16px;
-      padding: 60px;
-      box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
-      margin-bottom: 80px;
-      border: 1px solid #e5e7eb;
-    }
-
-    .about-intro h2 {
-      font-size: 2.5rem;
-      color: #0f172a;
-      margin-bottom: 30px;
-      font-weight: 800;
-      letter-spacing: -0.5px;
-    }
-
-    .about-intro p {
-      font-size: 1.15rem;
-      line-height: 1.8;
-      color: #475569;
-      margin-bottom: 20px;
-    }
-
-    .values-section {
-      margin-bottom: 80px;
-    }
-
-    .values-title {
-      text-align: center;
-      font-size: 2.5rem;
-      font-weight: 800;
-      color: #0f172a;
-      margin-bottom: 60px;
-      letter-spacing: -0.5px;
-    }
-
-    .values-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-    }
-
-    .value-card {
-      background: white;
-      padding: 40px;
-      border-radius: 16px;
-      border: 1px solid #e5e7eb;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-      transition: all 0.3s ease;
-    }
-
-    .value-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
-      border-color: #2563eb;
-    }
-
-    .value-icon {
-      width: 60px;
-      height: 60px;
-      background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 28px;
-      margin-bottom: 20px;
-    }
-
-    .value-card h3 {
-      font-size: 1.5rem;
-      color: #0f172a;
-      margin-bottom: 15px;
-      font-weight: 700;
-    }
-
-    .value-card p {
-      color: #64748b;
-      line-height: 1.7;
-      font-size: 1rem;
-    }
-
-    .credentials-section {
-      background: linear-gradient(to bottom, #f8fafc, white);
-      padding: 80px 20px;
-      margin: 0 -20px 80px;
-    }
-
-    .credentials-container {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .credentials-title {
-      text-align: center;
-      font-size: 2.5rem;
-      font-weight: 800;
-      color: #0f172a;
-      margin-bottom: 60px;
-      letter-spacing: -0.5px;
-    }
-
-    .credentials-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 40px;
-      text-align: center;
-    }
-
-    .credential-item {
-      padding: 30px;
-    }
-
-    .credential-icon {
-      font-size: 3.5rem;
-      margin-bottom: 20px;
-    }
-
-    .credential-title {
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: #0f172a;
-      margin-bottom: 10px;
-    }
-
-    .credential-description {
-      color: #64748b;
-      line-height: 1.6;
-    }
-
-    .team-section {
-      background: white;
-      border-radius: 16px;
-      padding: 60px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-      border: 1px solid #e5e7eb;
-      margin-bottom: 80px;
-    }
-
-    .team-section h2 {
-      font-size: 2.5rem;
-      color: #0f172a;
-      margin-bottom: 30px;
-      font-weight: 800;
-      text-align: center;
-      letter-spacing: -0.5px;
-    }
-
-    .team-description {
-      font-size: 1.15rem;
-      line-height: 1.8;
-      color: #475569;
-      text-align: center;
-      max-width: 800px;
-      margin: 0 auto 40px;
-    }
-
-    .commitment-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
-      margin-top: 40px;
-    }
-
-    .commitment-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 15px;
-      padding: 20px;
-      background: #f8fafc;
-      border-radius: 10px;
-      border-left: 3px solid #2563eb;
-    }
-
-    .commitment-check {
-      color: #2563eb;
-      font-size: 24px;
-      font-weight: bold;
-      flex-shrink: 0;
-    }
-
-    .commitment-text {
-      color: #334155;
-      font-weight: 500;
-      line-height: 1.6;
-    }
-
-    @media (max-width: 768px) {
-      .about-hero h1 {
-        font-size: 2.5rem;
-      }
-
-      .about-intro {
-        padding: 40px 30px;
-      }
-
-      .about-intro h2,
-      .values-title,
-      .credentials-title,
-      .team-section h2 {
-        font-size: 2rem;
-      }
-
-      .values-grid,
-      .credentials-grid,
-      .commitment-list {
-        grid-template-columns: 1fr;
-      }
-
-      .team-section {
-        padding: 40px 30px;
-      }
-    }
-  </style>
 </head>
 <body>
   <header class="top-bar">
-    📞 <a href="tel:6477190089">(647) 719-0089</a> | 📧 <a href="mailto:Pro1reno2017@gmail.com">Pro1reno2017@gmail.com</a>
+    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:4px;margin-top:-2px"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.38 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 5.55 5.55l.96-.96a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21 15.5v1.42z"/></svg><a href="tel:6477190089">(647) 719-0089</a> | <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:4px;margin-top:-2px"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><a href="mailto:Pro1reno2017@gmail.com">Pro1reno2017@gmail.com</a>
   </header>
 
   <nav class="navbar">
-    <div class="logo">
+        <div class="logo">
       <img src="pro1-reno-logo.jpg" alt="PRO-1 RENO">
       <span>PRO-1 RENO</span>
     </div>
-    <button class="mobile-menu-toggle" aria-label="Toggle menu">☰</button>
+    <button class="mobile-menu-toggle" aria-label="Toggle menu"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="18" y2="18"/></svg></button>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="services.html">Services</a></li>
-      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="about.html">About</a></li>
       <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+      <li class="theme-toggle-li">
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark/light mode"><span class="toggle-label" id="toggle-label">DARK</span>
+          <svg id="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+            <path d="M15 12l-8.5 8.5a2.121 2.121 0 0 1-3-3L12 9"/>
+            <path d="M17.64 15L22 10.64"/>
+            <path d="m20.91 11.7-1.25-1.25c-.6-.6-.93-1.4-.93-2.25v-.86L16.01 5.6a5.009 5.009 0 0 0-6.22 .78l-1.94 1.95 3.12 3.12"/>
+          </svg>
+          <svg id="theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" style="display:none">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+      </li>
     </ul>
   </nav>
 
-  <section class="about-hero">
-    <div class="about-hero-content">
-      <h1>About PRO-1 RENO</h1>
-      <p>Building excellence in home renovation across Woodstock and Oxford County</p>
-    </div>
-  </section>
-
-  <div class="about-content">
+  <section class="page fade-in">
+    <h1>Get in Touch</h1>
+    <p style="font-size: 1.1rem; margin-bottom: 30px;">Ready to transform your home? Fill out the form below or give us a call. We'll get back to you within 24 hours to discuss your project.</p>
     
-    <section class="about-intro">
-      <h2>Your Trusted Renovation Partner</h2>
-      <p>
-        Pro-1 Reno is a premier residential renovation and general contracting company based in Woodstock, Ontario, serving discerning homeowners throughout Oxford County and surrounding areas. We specialize in delivering exceptional craftsmanship, refined finishes, and expertly managed renovations that elevate both the beauty and functionality of your home.
-      </p>
-      <p>
-        From custom bathrooms and kitchens to full basement conversions and structural renovations, Pro-1 Reno approaches every project with precision, transparency, and a commitment to excellence. We collaborate closely with our clients, providing thoughtful planning, clear communication, and meticulous execution, ensuring every detail meets the highest standards and complies fully with Ontario building codes.
-      </p>
-      <p>
-        At Pro-1 Reno, quality is never compromised. Our mission is to create timeless spaces that add lasting value while offering a seamless, professional renovation experience from concept to completion.
-      </p>
-    </section>
-
-    <section class="values-section">
-      <h2 class="values-title">Our Core Values</h2>
-      <div class="values-grid">
+    <div style="display: grid; grid-template-columns: 1fr; gap: 40px; max-width: 1000px; margin: 0 auto;">
+      
+      <!-- Contact Form -->
+      <div>
+        <h2 style="color: #a0522d; margin-bottom: 20px;">Send Us a Message</h2>
+        <form id="contact-form">
+          <input type="text" name="from_name" placeholder="Your Name *" required />
+          <input type="email" name="from_email" placeholder="Your Email *" required />
+          <input type="tel" name="phone" placeholder="Your Phone Number" />
+          
+          <select name="project_type" required>
+            <option value="">Select Project Type *</option>
+            <option value="Kitchen Renovation">Kitchen Renovation</option>
+            <option value="Bathroom Remodel">Bathroom Remodel</option>
+            <option value="Basement Finishing">Basement Finishing</option>
+            <option value="Full Home Renovation">Full Home Renovation</option>
+            <option value="Other">Other</option>
+          </select>
+          
+          <textarea name="message" placeholder="Tell us about your project *" required></textarea>
+          
+          <button type="submit">Send Message</button>
+        </form>
         
-        <div class="value-card">
-          <div class="value-icon">⚡</div>
-          <h3>Quality First</h3>
-          <p>We never compromise on materials or workmanship. Every project receives the same meticulous attention to detail, regardless of size or budget.</p>
-        </div>
-
-        <div class="value-card">
-          <div class="value-icon">🤝</div>
-          <h3>Integrity & Honesty</h3>
-          <p>Transparent pricing, honest timelines, and open communication. We build trust by doing what we say and saying what we do.</p>
-        </div>
-
-        <div class="value-card">
-          <div class="value-icon">💼</div>
-          <h3>Professionalism</h3>
-          <p>From the initial consultation to final walkthrough, we maintain the highest standards of professionalism in every interaction.</p>
-        </div>
-
-        <div class="value-card">
-          <div class="value-icon">🎯</div>
-          <h3>Client-Focused</h3>
-          <p>Your vision drives our work. We listen carefully, provide expert guidance, and ensure the final result reflects your unique style and needs.</p>
-        </div>
-
-        <div class="value-card">
-          <div class="value-icon">⏰</div>
-          <h3>Reliability</h3>
-          <p>We respect your time and schedule. Projects are completed efficiently with minimal disruption to your daily life.</p>
-        </div>
-
-        <div class="value-card">
-          <div class="value-icon">🔧</div>
-          <h3>Expert Craftsmanship</h3>
-          <p>Our team consists of experienced professionals who take pride in their work and bring years of expertise to every project.</p>
-        </div>
-
+        <div id="form-status"></div>
       </div>
-    </section>
-
-  </div>
-
-  <section class="credentials-section">
-    <div class="credentials-container">
-      <h2 class="credentials-title">Why Choose PRO-1 RENO</h2>
-      <div class="credentials-grid">
+      
+      <!-- Contact Info -->
+      <div style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+        <h2 style="color: #a0522d; margin-bottom: 20px;">Contact Information</h2>
         
-        <div class="credential-item">
-          <div class="credential-icon">✓</div>
-          <h3 class="credential-title">Licensed & Insured</h3>
-          <p class="credential-description">Fully licensed and insured for your complete protection and peace of mind</p>
+        <div style="margin-bottom: 20px;">
+          <h3 style="color: #333; font-size: 1.1rem; margin-bottom: 10px;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:8px;margin-top:-2px"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.38 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 5.55 5.55l.96-.96a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21 15.5v1.42z"/></svg>Phone</h3>
+          <a href="tel:6477190089" style="color: #d2691e; text-decoration: none; font-size: 1.2rem;">(647) 719-0089</a>
         </div>
-
-        <div class="credential-item">
-          <div class="credential-icon">⭐</div>
-          <h3 class="credential-title">4.9/5 Star Rating</h3>
-          <p class="credential-description">Rated 4.9 out of 5 stars from 22 verified reviews on TrustedPros</p>
+        
+        <div style="margin-bottom: 20px;">
+          <h3 style="color: #333; font-size: 1.1rem; margin-bottom: 10px;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:8px;margin-top:-2px"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>Email</h3>
+          <a href="mailto:Pro1reno2017@gmail.com" style="color: #d2691e; text-decoration: none;">Pro1reno2017@gmail.com</a>
         </div>
-
-        <div class="credential-item">
-          <div class="credential-icon">📍</div>
-          <h3 class="credential-title">Woodstock Based</h3>
-          <p class="credential-description">Proudly serving Oxford County and surrounding communities with local expertise</p>
+        
+        <div style="margin-bottom: 20px;">
+          <h3 style="color: #333; font-size: 1.1rem; margin-bottom: 10px;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:8px;margin-top:-2px"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Service Area</h3>
+          <p style="color: #d2691e; font-size: 1rem; line-height: 1.6;">Woodstock, Tillsonburg, Ingersoll, London, Kitchener-Waterloo, Cambridge, Guelph, Brantford, Paris, and surrounding areas</p>
         </div>
-
-        <div class="credential-item">
-          <div class="credential-icon">💯</div>
-          <h3 class="credential-title">Quality Guarantee</h3>
-          <p class="credential-description">We stand behind our work with comprehensive warranties and ongoing support</p>
+        
+        <div style="margin-bottom: 20px;">
+          <h3 style="color: #333; font-size: 1.1rem; margin-bottom: 10px;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:8px;margin-top:-2px"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Business Hours</h3>
+          <p style="color: #666;">Monday - Friday: 8:00 AM - 6:00 PM<br>
+          Saturday: 9:00 AM - 4:00 PM<br>
+          Sunday: Closed</p>
         </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Reviews Section -->
-  <div class="about-content">
-    <section class="team-section" style="margin-bottom: 40px;">
-      <h2>What Our Clients Say</h2>
-      <div style="text-align: center; margin-bottom: 30px;">
-        <div style="font-size: 3rem; color: #fbbf24; margin-bottom: 10px;">⭐⭐⭐⭐⭐</div>
-        <div style="font-size: 2rem; font-weight: 800; color: #0f172a; margin-bottom: 10px;">4.9 out of 5</div>
-        <p style="color: #64748b; font-size: 1.1rem; margin-bottom: 20px;">Based on 22 verified customer reviews</p>
-        <a href="https://trustedpros.ca/company/pro--1-reno" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 12px 30px; background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%); color: white; text-decoration: none; border-radius: 8px; font-weight: 600; transition: transform 0.3s ease;">View All Reviews on TrustedPros</a>
-      </div>
-
-      <div class="commitment-list">
-        <div class="commitment-item" style="border-left-color: #fbbf24;">
-          <span class="commitment-check" style="color: #fbbf24;">⭐</span>
-          <div>
-            <strong style="color: #0f172a; display: block; margin-bottom: 5px;">Quality of Work: 4.9/5</strong>
-            <span class="commitment-text">Exceptional craftsmanship consistently praised by homeowners</span>
-          </div>
-        </div>
-        <div class="commitment-item" style="border-left-color: #fbbf24;">
-          <span class="commitment-check" style="color: #fbbf24;">⭐</span>
-          <div>
-            <strong style="color: #0f172a; display: block; margin-bottom: 5px;">Timeliness: 4.9/5</strong>
-            <span class="commitment-text">Projects completed on schedule with reliable timelines</span>
-          </div>
-        </div>
-        <div class="commitment-item" style="border-left-color: #fbbf24;">
-          <span class="commitment-check" style="color: #fbbf24;">⭐</span>
-          <div>
-            <strong style="color: #0f172a; display: block; margin-bottom: 5px;">Communication: 4.9/5</strong>
-            <span class="commitment-text">Clear, responsive communication throughout every project</span>
-          </div>
-        </div>
-        <div class="commitment-item" style="border-left-color: #fbbf24;">
-          <span class="commitment-check" style="color: #fbbf24;">⭐</span>
-          <div>
-            <strong style="color: #0f172a; display: block; margin-bottom: 5px;">Budget: 4.9/5</strong>
-            <span class="commitment-text">Transparent pricing with no hidden costs or surprises</span>
-          </div>
-        </div>
-        <div class="commitment-item" style="border-left-color: #fbbf24;">
-          <span class="commitment-check" style="color: #fbbf24;">⭐</span>
-          <div>
-            <strong style="color: #0f172a; display: block; margin-bottom: 5px;">Cleanliness: 4.8/5</strong>
-            <span class="commitment-text">Clean, organized work sites maintained throughout projects</span>
-          </div>
-        </div>
-        <div class="commitment-item" style="border-left-color: #fbbf24;">
-          <span class="commitment-check" style="color: #fbbf24;">⭐</span>
-          <div>
-            <strong style="color: #0f172a; display: block; margin-bottom: 5px;">Courteous: 4.9/5</strong>
-            <span class="commitment-text">Professional, respectful team members you can trust</span>
-          </div>
+        
+        <div style="background: #fff5eb; padding: 20px; border-radius: 8px; margin-top: 30px;">
+          <p style="margin: 0; font-weight: 600; color: #a0522d;">✓ Licensed & Insured</p>
+          <p style="margin: 10px 0 0; color: #666; font-size: 0.9rem;">Professional renovation services you can trust</p>
         </div>
       </div>
-    </section>
-
-    <section class="team-section">
-      <h2>Our Commitment to You</h2>
-      <p class="team-description">
-        When you choose PRO-1 RENO, you're choosing a partner who cares about your home as much as you do. We understand that renovations are more than construction projects, they're investments in your comfort, lifestyle, and future.
-      </p>
-
-      <div class="commitment-list">
-        <div class="commitment-item">
-          <span class="commitment-check">✓</span>
-          <span class="commitment-text">Clear, upfront pricing with no hidden fees or surprise costs</span>
-        </div>
-        <div class="commitment-item">
-          <span class="commitment-check">✓</span>
-          <span class="commitment-text">Detailed project timelines with regular progress updates</span>
-        </div>
-        <div class="commitment-item">
-          <span class="commitment-check">✓</span>
-          <span class="commitment-text">Premium materials sourced from trusted suppliers</span>
-        </div>
-        <div class="commitment-item">
-          <span class="commitment-check">✓</span>
-          <span class="commitment-text">Clean, organized work sites maintained daily</span>
-        </div>
-        <div class="commitment-item">
-          <span class="commitment-check">✓</span>
-          <span class="commitment-text">Respectful, professional crew members you can trust</span>
-        </div>
-        <div class="commitment-item">
-          <span class="commitment-check">✓</span>
-          <span class="commitment-text">Compliance with all local building codes and regulations</span>
-        </div>
-      </div>
-    </section>
-  </div>
-
-  <section class="cta-section">
-    <div class="cta-content">
-      <h2>Let's Build Something Great Together</h2>
-      <p>Ready to transform your space? Get in touch for a free consultation</p>
-      <a href="contact.html" class="btn btn-primary btn-large">Contact Us Today</a>
+      
     </div>
   </section>
 
@@ -522,8 +137,8 @@
       </div>
       <div class="footer-section">
         <h4>Contact</h4>
-        <p>📞 (647) 719-0089</p>
-        <p>📧 Pro1reno2017@gmail.com</p>
+        <p><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:6px;margin-top:-2px;opacity:0.7"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.38 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 5.55 5.55l.96-.96a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21 15.5v1.42z"/></svg>(647) 719-0089</p>
+        <p><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:6px;margin-top:-2px;opacity:0.7"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>Pro1reno2017@gmail.com</p>
       </div>
     </div>
     <div class="footer-bottom">
@@ -532,5 +147,84 @@
   </footer>
 
   <script src="script.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function(){
+      emailjs.init("jtqdbCQFA6MSqgE90");
+    })();
+  </script>
+  <script>
+    // Contact form handling with EmailJS
+    const form = document.getElementById('contact-form');
+    const formStatus = document.getElementById('form-status');
+    
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const submitButton = form.querySelector('button[type="submit"]');
+      const originalText = submitButton.textContent;
+      submitButton.textContent = 'Sending...';
+      submitButton.disabled = true;
+      
+      // Clear any existing messages
+      formStatus.innerHTML = '';
+      
+      // Send email using EmailJS
+      emailjs.sendForm('service_m1twssd', 'template_vlq9xyg', this)
+        .then(function() {
+          formStatus.innerHTML = '<div class="form-success" style="display: block;">Thank you! We\'ll get back to you within 24 hours.</div>';
+          form.reset();
+          
+          setTimeout(() => {
+            formStatus.innerHTML = '';
+          }, 5000);
+        }, function(error) {
+          formStatus.innerHTML = '<div class="form-error" style="display: block;">Oops! Something went wrong. Please call us at (647) 719-0089.</div>';
+          console.log('EmailJS error:', error);
+          
+          setTimeout(() => {
+            formStatus.innerHTML = '';
+          }, 5000);
+        })
+        .finally(function() {
+          submitButton.textContent = originalText;
+          submitButton.disabled = false;
+        });
+    });
+  </script>
+
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      const isDark = html.getAttribute('data-theme') === 'dark';
+      const next = isDark ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('pro1-theme', next);
+      const sun   = document.getElementById('theme-icon-sun');
+      const moon  = document.getElementById('theme-icon-moon');
+      const label = document.getElementById('toggle-label');
+      if (next === 'dark') {
+        if (sun)   sun.style.display  = 'none';
+        if (moon)  moon.style.display = 'block';
+        if (label) label.textContent  = 'LIGHT';
+      } else {
+        if (sun)   sun.style.display  = 'block';
+        if (moon)  moon.style.display = 'none';
+        if (label) label.textContent  = 'DARK';
+      }
+    }
+    (function(){
+      const saved = localStorage.getItem('pro1-theme') || 'light';
+      document.documentElement.setAttribute('data-theme', saved);
+      const sun   = document.getElementById('theme-icon-sun');
+      const moon  = document.getElementById('theme-icon-moon');
+      const label = document.getElementById('toggle-label');
+      if (saved === 'dark') {
+        if (sun)   sun.style.display  = 'none';
+        if (moon)  moon.style.display = 'block';
+        if (label) label.textContent  = 'LIGHT';
+      }
+    })();
+  </script>
 </body>
 </html>
