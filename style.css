@@ -44,16 +44,58 @@ body {
 .top-bar {
   background: var(--black);
   color: #fff;
-  padding: 10px 24px;
-  text-align: center;
+  padding: 9px 24px;
   font-family: var(--font-display);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px 16px;
 }
-.top-bar a { color: var(--orange-light); text-decoration: none; font-weight: 700; transition: color 0.2s; }
+
+/* Each contact item — icon and text stay glued together */
+.top-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.top-icon {
+  display: block;
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+
+.top-sep {
+  color: rgba(255,255,255,0.3);
+  font-size: 12px;
+}
+
+.top-bar a {
+  color: var(--orange-light);
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.2s;
+  line-height: 1;
+}
 .top-bar a:hover { color: #fff; }
+
+/* Mobile — stack vertically, hide separator */
+@media (max-width: 480px) {
+  .top-bar {
+    flex-direction: column;
+    gap: 5px;
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+  .top-sep { display: none; }
+}
 
 /* ── Navigation ─────────────────────────────────────── */
 .navbar {
@@ -1600,15 +1642,7 @@ footer,
 /* ── Tablet: 768px ──────────────────────────────────── */
 @media (max-width: 768px) {
 
-  /* Top bar */
-  .top-bar {
-    font-size: 12px;
-    padding: 8px 12px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 6px;
-  }
+  /* Top bar — handled by base styles above */
 
   /* Navbar */
   .navbar { padding: 0 16px; height: 64px; }
@@ -1732,8 +1766,7 @@ footer,
 /* ── Small phones: 480px ────────────────────────────── */
 @media (max-width: 480px) {
 
-  /* Top bar — stack on tiny screens */
-  .top-bar { flex-direction: column; gap: 4px; padding: 8px; font-size: 11px; }
+
 
   /* Hero */
   .hero h1 { font-size: clamp(1.9rem, 8vw, 2.8rem); }
@@ -1882,19 +1915,7 @@ html, body { max-width: 100%; overflow-x: hidden; }
   line-height: 1;
 }
 
-/* On mobile the nav-links collapse, but toggle must stay visible.
-   We pull it out of the collapsed ul and keep it next to the hamburger. */
-@media (max-width: 768px) {
-  .theme-toggle-li {
-    /* Remove from the collapsed dropdown — show inline in navbar row */
-    position: absolute;
-    right: 64px; /* sits left of the hamburger */
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  /* Keep toggle visible even when nav-links are hidden */
-  .nav-links .theme-toggle-li { display: flex !important; }
-}
+
 
 /* ── Dark mode overrides ────────────────────────────── */
 [data-theme="dark"] {
@@ -1944,22 +1965,7 @@ html, body { max-width: 100%; overflow-x: hidden; }
   color: #fff;
 }
 
-/* Mobile responsive toggle */
-@media (max-width: 768px) {
-  .theme-toggle-li {
-    position: absolute;
-    right: 64px;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  .theme-toggle {
-    height: 32px;
-    padding: 0 8px;
-    gap: 4px;
-  }
-  .theme-toggle .toggle-label { font-size: 10px; }
-  .theme-toggle::before { display: none; }
-}
+
 
 /* Service cards */
 [data-theme="dark"] .service-card { background: #1f2937; border-color: #374151; }
@@ -2084,7 +2090,6 @@ html, body { max-width: 100%; overflow-x: hidden; }
 @media (max-width: 768px) {
   [data-theme="dark"] .nav-links { background: #1f2937; }
   .theme-toggle-li { margin-left: 4px; }
-  .theme-toggle { width: 36px; height: 36px; }
 }
 
 
@@ -2199,3 +2204,47 @@ html, body { max-width: 100%; overflow-x: hidden; }
 
 /* Page generic text colour for dark */
 [data-theme="dark"] .page { color: #e5e7eb; }
+
+
+/* ═══════════════════════════════════════════════════════
+   TOGGLE BUTTON — fixed in navbar row (not in ul)
+   ═══════════════════════════════════════════════════════ */
+
+/* Navbar needs to be relative so nothing overlaps hamburger */
+.navbar { position: relative; }
+
+/* Toggle sits inline in the navbar flex row */
+.navbar > .theme-toggle {
+  margin-left: auto;  /* pushes it right */
+  margin-right: 12px; /* gap before hamburger */
+  flex-shrink: 0;
+}
+
+/* On desktop, nav-links is flex so toggle inside ul was fine.
+   Now it's directly in nav — hide the old li wrapper if any remain */
+.theme-toggle-li { display: none !important; }
+
+/* Mobile — toggle is already in the right place, just size it down */
+@media (max-width: 768px) {
+  .navbar > .theme-toggle {
+    height: 32px;
+    padding: 0 8px;
+    gap: 4px;
+    margin-right: 10px;
+    box-shadow: 2px 2px 0 var(--orange-dark);
+  }
+  .navbar > .theme-toggle .toggle-label { font-size: 10px; }
+  .navbar > .theme-toggle::before { display: none; }
+}
+
+/* Dark mode */
+[data-theme="dark"] .navbar > .theme-toggle {
+  border-color: var(--orange);
+  background: #1f2937;
+  color: var(--orange);
+  box-shadow: 2px 2px 0 var(--orange-dark);
+}
+[data-theme="dark"] .navbar > .theme-toggle:hover {
+  background: var(--orange);
+  color: #fff;
+}
